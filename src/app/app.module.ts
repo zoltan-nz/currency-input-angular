@@ -5,14 +5,9 @@ import { AppComponent } from './app.component';
 import { CurrencyInputComponent } from './currency-input/currency-input.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CurrencyInputComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, CurrencyInputComponent],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

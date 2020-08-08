@@ -10,18 +10,16 @@ import { NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => CurrencyInputComponent),
       multi: true,
-    }, {
+    },
+    {
       provide: NG_VALIDATORS,
       useExisting: forwardRef(() => CurrencyInputComponent),
-      multi: true
-    }
-  ]
+      multi: true,
+    },
+  ],
 })
 export class CurrencyInputComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
