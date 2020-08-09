@@ -1,5 +1,6 @@
-import { Component, forwardRef, OnInit } from '@angular/core';
+import { Component, forwardRef, Input, OnInit } from '@angular/core';
 import { NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { AbstractFormControlClass } from '../abstract-form-control-class/abstract-form-control.class';
 
 @Component({
   selector: 'app-currency-input',
@@ -18,8 +19,21 @@ import { NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
     },
   ],
 })
-export class CurrencyInputComponent implements OnInit {
-  constructor() {}
+export class CurrencyInputComponent extends AbstractFormControlClass implements OnInit {
+  @Input() name = '';
+  @Input() label = '';
 
-  ngOnInit(): void {}
+  id = '';
+
+  constructor() {
+    super();
+  }
+
+  get showError(): boolean {
+    return this.form.invalid && (this.form.dirty || this.form.touched);
+  }
+
+  ngOnInit(): void {
+    this.id = `${this.name}-currency-input`;
+  }
 }

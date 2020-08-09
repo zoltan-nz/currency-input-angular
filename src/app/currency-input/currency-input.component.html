@@ -1,1 +1,19 @@
-<p>currency-input works!</p>
+<div>
+  <label for="{{ id }}">
+    {{ label }}
+  </label>
+  <div class="dollar">
+    <input
+      id="{{ id }}"
+      [formControl]="form"
+      type="text"
+      name="currency"
+      placeholder="0.00"
+      autocomplete="off"
+      required
+    />
+  </div>
+  <div *ngIf="showError">
+    <div *ngIf="form.errors?.required">Please enter a valid amount.</div>
+  </div>
+</div>

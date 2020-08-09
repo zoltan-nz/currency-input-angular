@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -6,7 +7,7 @@ import { CurrencyInputComponent } from './currency-input/currency-input.componen
 
 @NgModule({
   declarations: [AppComponent, CurrencyInputComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
