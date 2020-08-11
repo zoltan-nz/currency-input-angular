@@ -1,0 +1,12 @@
+.dollar::before {
+  position: relative;
+  width: 1.5rem;
+  content: '$';
+  z-index: 4;
+  left: 1rem;
+}
+
+.form-control {
+  padding-left: 1.2rem;
+  width: 10rem;
+}
