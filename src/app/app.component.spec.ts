@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { CurrencyInputComponent } from './currency-input/currency-input.component';
+import { CurrencyInputComponent } from './currency-input.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {

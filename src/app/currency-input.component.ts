@@ -1,6 +1,6 @@
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
 import { NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { AbstractFormControlClass } from '../abstract-form-control-class/abstract-form-control.class';
+import { AbstractFormControlClass } from './abstract-form-control.class';
 
 @Component({
   selector: 'app-currency-input',
